@@ -1,6 +1,6 @@
-import { useState, useCallback, useEffect } from "react";
-import { StyleSheet, TouchableOpacity, View, Text, Image, Dimensions, ScrollView } from "react-native";
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useState, useEffect } from "react";
+import { StyleSheet, TouchableOpacity, View, Text, Image, Dimensions } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Icon from './Icon';
 
@@ -39,22 +39,28 @@ const RateQuestion = ({ item, option }) => {
             const stored = await AsyncStorage.getItem('optionRatings');
             const existing = stored ? JSON.parse(stored) : [];
 
-            const newRating = {
-                id: Date.now(),
-                option,
-                cost,
-                comfort,
-                time,
-                total,
-            };
+            const existingIndex = existing.findIndex(r => r.option === option);
 
-            const alreadyExists = existing.find(r => r.id === newRating.id);
+            if (existingIndex !== -1) {
+                existing[existingIndex] = {
+                    ...existing[existingIndex],
+                    cost,
+                    comfort,
+                    time,
+                    total,
+                };
+            } else {
+                existing.push({
+                    id: Date.now(),
+                    option,
+                    cost,
+                    comfort,
+                    time,
+                    total,
+                });
+            }
 
-            const updatedRatings = alreadyExists
-            ? existing.map(r => r.id === newRating.id ? newRating : r)
-            : [...existing, newRating];
-
-            await AsyncStorage.setItem('optionRatings', JSON.stringify(updatedRatings));
+            await AsyncStorage.setItem('optionRatings', JSON.stringify(existing));
 
             navigation.goBack('');
         } catch (error) {

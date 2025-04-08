@@ -125,7 +125,7 @@ const Compare = () => {
                                     </View>
                                 ))
                             }
-                            <View style={{height: 500}} />
+                            <View style={{height: 550}} />
                         </ScrollView>
                     ) : (
                         <View style={{width: '100%', alignItems: 'center', marginTop: height * 0.2}}>
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         position: 'absolute',
         bottom: 0,
-        zIndex: 10
+        zIndex: 12
     },
 
     filterTitle: {
