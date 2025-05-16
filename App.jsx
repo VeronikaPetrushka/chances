@@ -1,106 +1,75 @@
-import React, { useEffect } from 'react';
-import { Animated, ImageBackground } from 'react-native';
 import { enableScreens } from 'react-native-screens';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import QuestionsScreen from './src/screens/QuestionsScreen';
-import AddQuestionScreen from './src/screens/AddQuestionScreen';
-import ReadQuestionScreen from './src/screens/ReadQuestionScreen';
-import FavoriteQuestionsScreen from './src/screens/FavoriteQuestionsScreen';
-import CompareScreen from './src/screens/CompareScreen';
-import RateQuestionScreen from './src/screens/RateQuestionScreen';
-import GraphsScreen from './src/screens/GraphsScreen';
-import ProsConsScreen from './src/screens/ProsConsScreen';
-import RateOptionScreen from './src/screens/RateOptionScreen';
-import RateResultScreen from './src/screens/RateResultScreen';
-import DecisionQuizScreen from './src/screens/DecisionQuizScreen';
+import DecisionScrnPath from './jxwoencwnevwrne/DecisionConstantsPath/wekdkwe';
 
 enableScreens();
 
 const Stack = createStackNavigator();
 
-const PreviewScreen = ({ navigation }) => {
-    const progress = new Animated.Value(0);
-
-    useEffect(() => {
-        Animated.timing(progress, {
-          toValue: 1,
-          duration: 1500,
-          useNativeDriver: true,
-        }).start(() => {
-          navigation.navigate('QuestionsScreen');
-        });
-      }, []);
-    
-  return (
-    <ImageBackground source={require('./src/assets/loader.png')} style={{flex: 1}} />
-  );
-};
-
 const App = () => {
 
   return (
       <NavigationContainer>
-          <Stack.Navigator initialRouteName={"PreviewScreen" }>    
+          <Stack.Navigator initialRouteName={"Pmsdefnerfkjdf" }>    
               <Stack.Screen 
-                    name="PreviewScreen" 
-                    component={PreviewScreen} 
+                    name="Pmsdefnerfkjdf" 
+                    component={DecisionScrnPath.Pmsdefnerfkjdf} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="QuestionsScreen" 
-                    component={QuestionsScreen} 
+                    component={DecisionScrnPath.QuestionsScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="AddQuestionScreen" 
-                    component={AddQuestionScreen} 
+                    component={DecisionScrnPath.AddQuestionScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="ReadQuestionScreen" 
-                    component={ReadQuestionScreen} 
+                    component={DecisionScrnPath.ReadQuestionScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="FavoriteQuestionsScreen" 
-                    component={FavoriteQuestionsScreen} 
+                    component={DecisionScrnPath.FavoriteQuestionsScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="CompareScreen" 
-                    component={CompareScreen} 
+                    component={DecisionScrnPath.CompareScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="RateQuestionScreen" 
-                    component={RateQuestionScreen} 
+                    component={DecisionScrnPath.RateQuestionScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="GraphsScreen" 
-                    component={GraphsScreen} 
+                    component={DecisionScrnPath.GraphsScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="ProsConsScreen" 
-                    component={ProsConsScreen} 
+                    component={DecisionScrnPath.ProsConsScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="RateOptionScreen" 
-                    component={RateOptionScreen} 
+                    component={DecisionScrnPath.RateOptionScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="RateResultScreen" 
-                    component={RateResultScreen} 
+                    component={DecisionScrnPath.RateResultScreen} 
                     options={{ headerShown: false }} 
               />
               <Stack.Screen 
                     name="DecisionQuizScreen" 
-                    component={DecisionQuizScreen} 
+                    component={DecisionScrnPath.DecisionQuizScreen} 
                     options={{ headerShown: false }} 
               />
           </Stack.Navigator>
