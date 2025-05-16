@@ -14,6 +14,7 @@ import GraphsScreen from './src/screens/GraphsScreen';
 import ProsConsScreen from './src/screens/ProsConsScreen';
 import RateOptionScreen from './src/screens/RateOptionScreen';
 import RateResultScreen from './src/screens/RateResultScreen';
+import DecisionQuizScreen from './src/screens/DecisionQuizScreen';
 
 enableScreens();
 
@@ -95,6 +96,11 @@ const App = () => {
               <Stack.Screen 
                     name="RateResultScreen" 
                     component={RateResultScreen} 
+                    options={{ headerShown: false }} 
+              />
+              <Stack.Screen 
+                    name="DecisionQuizScreen" 
+                    component={DecisionQuizScreen} 
                     options={{ headerShown: false }} 
               />
           </Stack.Navigator>

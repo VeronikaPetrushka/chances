@@ -61,15 +61,15 @@ const Nav = () => {
             </TouchableOpacity>
 
             <TouchableOpacity 
-                style={[styles.btn, currentScreen === 'QuizScreen' && {backgroundColor: '#fdb938'}]} 
-                onPress={() => handleNavigate('QuizScreen')}>
+                style={[styles.btn, currentScreen === 'DecisionQuizScreen' && {backgroundColor: '#fdb938'}]} 
+                onPress={() => handleNavigate('DecisionQuizScreen')}>
                 <Icon
                     image={require('../assets/icons/menu/quiz.png')}
-                    active={currentScreen === 'QuizScreen'}
+                    active={currentScreen === 'DecisionQuizScreen'}
                     width={28}
                     height={28}
                 />
-                <Text style={[styles.btnText, currentScreen === 'QuizScreen' && {color: '#393e42'}]}>Quiz</Text>
+                <Text style={[styles.btnText, currentScreen === 'DecisionQuizScreen' && {color: '#393e42'}]}>Quiz</Text>
             </TouchableOpacity>
 
         </View>
