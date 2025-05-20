@@ -5,12 +5,12 @@ const Icon = ({ image, width, height, active }) => {
     return (
         <Image 
             source={image}
-            style={{
+            style={[{
                 width: width, 
                 height: height, 
-                resizeMode: 'contain',
-                tintColor: active ? '#393e42' : '#ffffff'
-            }}
+                resizeMode: 'contain'
+            },
+            active && {tintColor: '#393e42'}]}
         />
     );
 };

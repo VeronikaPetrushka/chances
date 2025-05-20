@@ -1,5 +1,5 @@
 import ScreenWrapper from "../DecisionConstantsPath/wemfcmefck";
-import RateQuestion from "../skcamcomown/dwe,we,c";
+import RateQuestion from "../skcamcomown/nrjfncerjfnje";
 
 const RateQuestionScreen = ({ route }) => {
     const { item, option } = route.params;

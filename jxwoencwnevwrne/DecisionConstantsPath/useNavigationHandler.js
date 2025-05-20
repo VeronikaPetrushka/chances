@@ -20,10 +20,8 @@ const useNavigationHandler = () => {
             }
         };
 
-        // Initial update
         updateRoute();
 
-        // Subscribe to state changes
         const unsubscribe = navigation.addListener('state', updateRoute);
 
         return unsubscribe;

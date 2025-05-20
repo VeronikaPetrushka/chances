@@ -1,6 +1,5 @@
 import { TouchableOpacity, StyleSheet, View, Text } from "react-native";
 import useNavigationHandler from '../DecisionConstantsPath/useNavigationHandler';
-import { useNavigation } from '@react-navigation/native';
 import Icon from './wefdwefmoe';
 
 const ppalkfme = [
@@ -11,7 +10,6 @@ const ppalkfme = [
 ];
 
 const Nav = () => {
-  const navigation = useNavigation();
   const { currentRoute, handleNavigation } = useNavigationHandler();
 
   return (

@@ -1,5 +1,5 @@
 import ScreenWrapper from "../DecisionConstantsPath/wemfcmefck";
-import ReadQuestion from "../skcamcomown/ewcf,ver,fler";
+import ReadQuestion from "../skcamcomown/ermfrekmflmf";
 
 const ReadQuestionScreen = ({ route }) => {
     const { item } = route.params;
