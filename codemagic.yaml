@@ -10,7 +10,7 @@ workflows:
         distribution_type: app_store
         bundle_identifier: com.decisionPathChance2025
       vars:
-        APP_STORE_APPLE_ID: 6744101446 #change
+        APP_STORE_APPLE_ID: 6746166635
         BUNDLE_ID: 'com.decisionPathChance2025'
         XCODE_WORKSPACE: 'DecisionPathChance.xcworkspace'
         XCODE_SCHEME: 'DecisionPathChance'

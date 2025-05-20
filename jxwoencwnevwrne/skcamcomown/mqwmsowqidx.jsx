@@ -3,7 +3,7 @@ import useNavigationHandler from '../DecisionConstantsPath/useNavigationHandler'
 import { useNavigation } from '@react-navigation/native';
 import Icon from './wefdwefmoe';
 
-const navItems = [
+const ppalkfme = [
   { saxopskx: 'QuestionsScreen', pasdopsalx: 'Questions', sscdxjnscn: require('../alkmmdwmwem/odkcfdekmvpoe/menu/questions.png') },
   { saxopskx: 'CompareScreen', pasdopsalx: 'Compare', sscdxjnscn: require('../alkmmdwmwem/odkcfdekmvpoe/menu/compare.png') },
   { saxopskx: 'ProsConsScreen', pasdopsalx: 'Pros/Cons', sscdxjnscn: require('../alkmmdwmwem/odkcfdekmvpoe/menu/pros-cons.png') },
@@ -12,11 +12,11 @@ const navItems = [
 
 const Nav = () => {
   const navigation = useNavigation();
-  const { currentRoute, handleNavigation } = useNavigationHandler({ navigation });
+  const { currentRoute, handleNavigation } = useNavigationHandler();
 
   return (
     <View style={styles.container}>
-      {navItems.map((itm, idx) => {
+      {ppalkfme.map((itm, idx) => {
         const isActive = currentRoute === itm.saxopskx;
         return (
           <TouchableOpacity
